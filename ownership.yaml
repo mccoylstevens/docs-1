@@ -1,7 +1,7 @@
 ---
 version: 1
-ownership:
-  - team: github/docs
+ownership: 05/01/2025
+  ******************GitHub team Review *******: github/docs
     repo: https://github.com/github/docs-internal
     name: docs-internal
     kind: moda
