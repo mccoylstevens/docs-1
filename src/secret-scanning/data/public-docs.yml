@@ -1841,6 +1841,17 @@
   hasPushProtection: true
   hasValidityCheck: false
   isduplicate: false
+- provider: Groq
+  supportedSecret: Groq API Key
+  secretType: groq_api_key
+  versions:
+    fpt: '*'
+    ghec: '*'
+  isPublic: true
+  isPrivateWithGhas: true
+  hasPushProtection: false
+  hasValidityCheck: false
+  isduplicate: false
 - provider: HashiCorp
   supportedSecret: HashiCorp Vault Batch Token
   secretType: hashicorp_vault_batch_token
@@ -2505,6 +2516,17 @@
   isPublic: true
   isPrivateWithGhas: true
   hasPushProtection: false
+  hasValidityCheck: false
+  isduplicate: false
+- provider: MongoDB
+  supportedSecret: MongoDB Atlas Service Account Secret
+  secretType: mongodb_atlas_service_account_secret
+  versions:
+    fpt: '*'
+    ghec: '*'
+  isPublic: true
+  isPrivateWithGhas: true
+  hasPushProtection: true
   hasValidityCheck: false
   isduplicate: false
 - provider: Naver Cloud
@@ -4137,6 +4159,17 @@
   hasPushProtection: true
   hasValidityCheck: false
   isduplicate: true
+- provider: xAI
+  supportedSecret: xAI API Key
+  secretType: xai_api_key
+  versions:
+    fpt: '*'
+    ghec: '*'
+  isPublic: false
+  isPrivateWithGhas: true
+  hasPushProtection: false
+  hasValidityCheck: false
+  isduplicate: false
 - provider: Yandex
   supportedSecret: Yandex.Cloud API Key
   secretType: yandex_cloud_api_key
