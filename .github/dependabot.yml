@@ -1,47 +1,12 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for more information:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://containers.dev/guide/dependabot
+
 version: 2
-
-registries:
-  ghcr: # Define access for a private registry
-    type: docker-registry
-    url: ghcr.io
-    username: PAT
-    password: ${{secrets.CONTAINER_BUILDER_TOKEN}}
-
 updates:
-  - package-ecosystem: npm
-    directory: '/'
-    schedule:
-      interval: weekly
-      day: tuesday
-    ignore:
-      # Because this is so dependent on the remote server we use
-      - dependency-name: '@elastic/elasticsearch'
-      # Because whatever we have needs to match what @primer/react also uses
-      - dependency-name: 'styled-components'
-      - dependency-name: '*'
-        update-types:
-          ['version-update:semver-patch', 'version-update:semver-minor']
-
-  - package-ecosystem: 'github-actions'
-    directory: '/'
-    schedule:
-      interval: weekly
-      day: tuesday
-    ignore:
-      - dependency-name: '*'
-        update-types:
-          ['version-update:semver-patch', 'version-update:semver-minor']
-      - dependency-name: 'github/internal-actions'
-
-  - package-ecosystem: 'docker'
-    registries:
-      - ghcr
-    directory: '/'
-    schedule:
-      interval: daily
-    groups:
-      baseImages:
-        patterns:
-          - '*'
-    ignore:
-      - dependency-name: 'node' # Ignore Dockerfile.openapi_decorator
+ - package-ecosystem: "devcontainers"
+   directory: "/"
+   schedule:
+     interval: weekly

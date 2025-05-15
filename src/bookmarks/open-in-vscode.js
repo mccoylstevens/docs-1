@@ -1,5 +1,6 @@
 /* The path to your local copy of repo */
-const checkoutPath = 'REPLACE_ME'
+const checkoutPath = 'REPO_PATH' // e.g. '/Users/username/Projects/vscode-docs'
+/* The path to your local copy of repo */
 
 const filepath = window.location.pathname.replace(/\/en\/([^@]+?@[^@]+?\/)?/, '/content/')
 const isIndexFile = filepath.split('/').length < 5
